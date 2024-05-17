@@ -16,7 +16,7 @@
 
 ## Iniciando o projeto... 📌
 
-### 1. Iniciar um ambiente virtual (venv) e ativa-la. </br>
+### 1. Iniciar um ambiente virtual (venv) e ativá-la. </br>
 python -m pip install --upgrade pip setuptools virtualenv </br>
 python -m venv kivy_venv  </br>
 kivy_venv\Scripts\activate </br>
@@ -24,6 +24,6 @@ kivy_venv\Scripts\activate </br>
 ### 2. Instalar dependencias: </br>
 pip install -r requirements.txt </br>
 ou instalar o kivy: </br>
-python -m pip install kivy
-
+python -m pip install kivy </br>
+pip install pyautogui </br>
 

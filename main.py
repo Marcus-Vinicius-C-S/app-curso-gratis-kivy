@@ -12,6 +12,30 @@ import pyautogui
 
 # Definição das janelas de tela
 
+class LoginWindow(Screen):
+    # Definição de propriedades de objetos para os elementos de interface do usuário
+    email = ObjectProperty(None)
+    password = ObjectProperty(None)
+
+    def createBtn(self):
+        # Método para navegar para a tela de criação de conta
+        self.reset()
+        sm.current = "create"
+    
+    def loginBtn(self):
+        # Método para lidar com o evento de clique no botão de login
+        if db.validate(self.email.text, self.password.text):
+            MainWindow.current = self.email.text
+            self.reset()
+            sm.current = "main"
+        else:
+            invalidLogin()
+        
+    def reset(self):
+        # Método para redefinir os campos do formulário
+        self.email.text = ""
+        self.password.text = ""
+
 class CreateAccountWindow(Screen):
     # Definição de propriedades de objetos para os elementos de interface do usuário
     namee = ObjectProperty(None)
@@ -40,31 +64,6 @@ class CreateAccountWindow(Screen):
         self.email.text = ""
         self.password.text = ""
         self.namee.text = ""
-        
-        
-class LoginWindow(Screen):
-    # Definição de propriedades de objetos para os elementos de interface do usuário
-    email = ObjectProperty(None)
-    password = ObjectProperty(None)
-
-    def createBtn(self):
-        # Método para navegar para a tela de criação de conta
-        self.reset()
-        sm.current = "create"
-    
-    def loginBtn(self):
-        # Método para lidar com o evento de clique no botão de login
-        if db.validate(self.email.text, self.password.text):
-            MainWindow.current = self.email.text
-            self.reset()
-            sm.current = "main"
-        else:
-            invalidLogin()
-        
-    def reset(self):
-        # Método para redefinir os campos do formulário
-        self.email.text = ""
-        self.password.text = ""
         
         
 class MainWindow(Screen):
