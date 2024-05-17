@@ -26,4 +26,10 @@ pip install -r requirements.txt </br>
 ou instalar o kivy: </br>
 python -m pip install kivy </br>
 pip install pyautogui </br>
+pip install kivymd </br>
+pip install watchdog </br>
+
+### 3. Executar o projeto: </br>
+Digite no terminal:
+python watchdog_script.py
 

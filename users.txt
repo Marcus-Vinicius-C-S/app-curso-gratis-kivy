@@ -1,1 +1,2 @@
 teste1@gmail.com;senha1123@;teste1;2024-05-06
+teste3@gmail.com;senhateste3;teste3;2024-05-17
